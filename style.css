@@ -7,6 +7,8 @@
 /*modo claro*/
 body {
     font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     background-color: #fafafa;
     color: #333;
 }
@@ -23,10 +25,11 @@ nav {
     width: 100%;
     top: 0%;
     background-color: #333;
+    z-index: 9999; /*pra não clipar com os box debaixo no scroll*/
 }
 
 nav a {
-    color: #fafafa; /*letras no menu*/
+    color: #fafafa; /*letras dos links no menu*/
     margin: 40px;
     text-align: center;
     padding: 10px 20px;
@@ -48,27 +51,129 @@ section {
     padding: 80px 20px /*desguda o topo e laterais*/
 }
 
+/*primeira section*/
 #sobreMim {
-    text-align: center;
+    text-align: center; /*centralizado*/
     margin: auto;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #ffffff, #e6f7ff);
+}
+
+#sobreMim h2, #sobreMim ul {
+    display: block;
+    margin: auto;
+    width: 90%; /*para não cortar no celular/tablet*/
+    max-width: 550px;/*a largura de pc*/
+    border: 5px #121212 double;
+    border-radius: 10px;
+    /*border definido e deixando ambos com mesma largura horizontal*/
+    background: linear-gradient(-35deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 4px 13px 5px;
+    /*background chamativo*/
+    transition: all 0.3s ease;
+    /*animação do mouse, suave*/
+}
+
+/*animação ao passar o mouse*/
+#sobreMim h2:hover, #sobreMim ul:hover {
+    transform: translateY(-5px);
+}
+
+#sobreMim h2 {
+    padding: 10px 20px;
+    color: #233445;
 }
 
 #sobreMim ul {
     list-style-type: none; /*retira bolinhas da lista*/
+    padding: 20px;
 }
 
+/*simbolo antes da lista*/
+#sobreMim ul li{
+    text-align: left;
+    padding: 5px 0;
+}
+
+#sobreMim ul li::before{
+    content: "✦";
+    color: #233445;
+    margin-right: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*section 2*/
 #formacao {
     text-align: center;
     margin: auto;
+    background: linear-gradient(to bottom, #e6f7ff, #f3eaff);
+}
+
+#formacao h2, #formacao ul {
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 550px;
+    border: 5px #121212 double;
+    border-radius: 10px;
+    /*border definido e deixando ambos com mesma largura horizontal*/
+    background: linear-gradient(-35deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 4px 13px 5px;
+    /*background chamativo*/
+    transition: all 0.3s ease;
+    /*animação do mouse, suave*/
+}
+
+/*animação ao passar o mouse*/
+#formacao h2:hover, #formacao ul:hover {
+    transform: translateY(-5px);
+}
+
+#formacao h2 {
+    padding: 10px 20px;
+    color: #233445;
 }
 
 #formacao ul {
-    list-style-type: none; /*retira bolinhas da lista*/
+   list-style-type: none; /*retira bolinhas da lista*/
+    padding: 20px;
 }
 
+/*simbolo antes da lista*/
+#formacao ul li{
+    text-align: left;
+    padding: 5px 0;
+}
+
+#formacao ul li::before{
+    content: "✦";
+    color: #233445;
+    margin-right: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*section 3*/
 #portfolio {
     text-align: center;
     margin: auto;
+    background: linear-gradient(to bottom, #f3eaff, #e8fcf5);
+}
+
+#portfolio h2 {
+    padding: 10px 20px;
+    color: #233445;
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 550px;
+    border: 5px #121212 double;
+    border-radius: 10px;
+    /*border definido*/
+    background: linear-gradient(-35deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 4px 13px 5px;
+    /*background chamativo*/
 }
 
 #portfolio div {
@@ -79,11 +184,66 @@ section {
     display: inline-block;
 }
 
-body.modo-escuro #portfolio div {
-    background-color: #fafafa;
-}
-
+/*section 4*/
 #contato {
     text-align: center;
     margin: auto;
+    background: linear-gradient(to bottom, #e8fcf5, #ffffff);;
+}
+
+#contato form{/*border estilo*/
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 550px;
+    border: 5px #121212 double;
+    border-radius: 10px;
+    /*border definido e deixando ambos com mesma largura horizontal*/
+    background: linear-gradient(-35deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 4px 13px 5px;
+    /*background chamativo*/
+}
+
+#contato input[type="text"], #contato input[type="email"], #contato textarea {
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #121212;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    display: block;
+    margin: 10px auto 20px auto;
+}
+
+#contato button[type="submit"] {
+    width: 25%;
+    padding: 6px;
+    border: 2px solid #121212;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    display: block;
+    margin: 10px auto 20px auto;
+}
+
+/*feedback do click do botão*/
+#contato button[type="submit"]:active {
+    transform: scale(0.95);
+    background-color: #f0f4f3;
+}
+
+#contato button[type="submit"]:hover{
+    cursor: pointer;
+}
+
+/*footer simples*/
+footer {
+    padding: 20px 0;
+    text-align: center;
 }

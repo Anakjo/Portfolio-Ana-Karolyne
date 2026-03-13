@@ -269,3 +269,17 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
+/*responsividade de varias telas*/
+@media (max-width: 600px) {
+    /* Faz seções de 550px ocuparem quase toda da tela */
+    section, .container, nav {
+        width: 95% !important;
+        margin: 10px auto;
+    }
+
+    nav {
+        flex-direction: column; /* No celular o menu um embaixo do outro */
+        padding: 10px;
+    }
+}

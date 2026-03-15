@@ -5,7 +5,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /*não pula muito rápido de uma seção para a outra*/
+    scroll-behavior: smooth;
+    /*não pula muito rápido de uma seção para a outra*/
 }
 
 /*Estilização do modo claro na alternância de tema*/
@@ -20,34 +21,25 @@ body {
 /*Estilização da manipulação de estado para alternância de tema, modo escuro (Dark Mode)*/
 body.modo-escuro {
     background-color: #121212 !important;
-    background-image: none !important; /*remove o degradê claro */
+    background-image: none !important;
+    /*remove o degradê claro */
     color: #fafafa !important;
 }
 
 body.modo-escuro section {
-    background: #121212 !important; /*não fica o degradê do modo claro*/
-}
-
-/*estilização das caixas do modo escuro*/
-body.modo-escuro h2, 
-body.modo-escuro ul, 
-body.modo-escuro form, 
-body.modo-escuro #portfolio div {
-    background: #1e1e1e !important; /*Cinza um pouco mais claro que o fundo*/
-    color: #fafafa !important;
-    border-color: #444 !important; /*Borda mais suave para não brilhar no escuro*/
-    box-shadow: 4px 13px 5px rgba(0,0,0,0.5) !important;
+    background: #121212 !important;
+    /*não fica o degradê do modo claro*/
 }
 
 /*Ajusta os textos das listas e h2 no modo escuro*/
-body.modo-escuro h2, 
-body.modo-escuro li, 
+body.modo-escuro h2,
+body.modo-escuro li,
 body.modo-escuro li::before {
     color: #fafafa !important;
 }
 
 /*Ajusta o formulário no modo escuro*/
-body.modo-escuro input, 
+body.modo-escuro input,
 body.modo-escuro textarea {
     background-color: #333 !important;
     color: white !important;
@@ -62,21 +54,24 @@ nav {
     top: 0%;
     background-color: #333;
     padding: 10px 0;
-    z-index: 9999; /*pra não clipar com os box debaixo no scroll*/
+    z-index: 9999;
+    /*pra não clipar com os box debaixo no scroll*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 nav a {
-    color: #fafafa; /*letras dos links no menu*/
+    color: #fafafa;
+    /*letras dos links no menu*/
     margin: 0 10px;
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
 }
 
-nav button { /*botão de alterar tema*/
+nav button {
+    /*botão de alterar tema*/
     width: auto;
     padding: 5px 15px;
     cursor: pointer;
@@ -88,7 +83,8 @@ nav button { /*botão de alterar tema*/
     font-size: 16px;
 }
 
-nav button:active { /*clique do botão*/
+nav button:active {
+    /*clique do botão*/
     transform: scale(0.95);
     background-color: #f0f4f3;
 }
@@ -104,23 +100,29 @@ body.modo-escuro nav a {
 
 /*separar seções*/
 section {
-    min-height: 100vh; /*100% da tela */
-    padding: 80px 20px /*desguda o topo e laterais*/
+    min-height: 100vh;
+    /*100% da tela */
+    padding: 80px 20px
+        /*desguda o topo e laterais*/
 }
 
 /*primeira section*/
 #sobreMim {
-    text-align: center; /*centralizado*/
+    text-align: center;
+    /*centralizado*/
     margin: auto;
     padding: 80px 0;
     background: linear-gradient(to bottom, #ffffff, #e6f7ff);
 }
 
-#sobreMim h2, #sobreMim ul {
+#sobreMim h2,
+#sobreMim ul {
     display: block;
     margin: auto;
-    width: 90%; /*para não cortar no celular/tablet*/
-    max-width: 550px;/*a largura de pc*/
+    width: 90%;
+    /*para não cortar no celular/tablet*/
+    max-width: 550px;
+    /*a largura de pc*/
     border: 5px #121212 double;
     border-radius: 10px;
     /*border definido e deixando ambos com mesma largura horizontal*/
@@ -132,7 +134,8 @@ section {
 }
 
 /*animação ao passar o mouse*/
-#sobreMim h2:hover, #sobreMim ul:hover {
+#sobreMim h2:hover,
+#sobreMim ul:hover {
     transform: translateY(-5px);
 }
 
@@ -142,17 +145,18 @@ section {
 }
 
 #sobreMim ul {
-    list-style-type: none; /*retira bolinhas da lista*/
+    list-style-type: none;
+    /*retira bolinhas da lista*/
     padding: 20px;
 }
 
 /*simbolo antes da lista*/
-#sobreMim ul li{
+#sobreMim ul li {
     text-align: left;
     padding: 5px 0;
 }
 
-#sobreMim ul li::before{
+#sobreMim ul li::before {
     content: "✦";
     color: #233445;
     margin-right: 10px;
@@ -167,7 +171,8 @@ section {
     background: linear-gradient(to bottom, #e6f7ff, #f3eaff);
 }
 
-#formacao h2, #formacao ul {
+#formacao h2,
+#formacao ul {
     display: block;
     margin: auto;
     width: 90%;
@@ -183,7 +188,8 @@ section {
 }
 
 /*animação ao passar o mouse*/
-#formacao h2:hover, #formacao ul:hover {
+#formacao h2:hover,
+#formacao ul:hover {
     transform: translateY(-5px);
 }
 
@@ -193,17 +199,18 @@ section {
 }
 
 #formacao ul {
-   list-style-type: none; /*retira bolinhas da lista*/
+    list-style-type: none;
+    /*retira bolinhas da lista*/
     padding: 20px;
 }
 
 /*simbolo antes da lista*/
-#formacao ul li{
+#formacao ul li {
     text-align: left;
     padding: 5px 0;
 }
 
-#formacao ul li::before{
+#formacao ul li::before {
     content: "✦";
     color: #233445;
     margin-right: 10px;
@@ -236,24 +243,33 @@ section {
 /*Container dos 3 projetos*/
 .container-projetos {
     display: flex;
-    flex-wrap: wrap; /*Faz quebrar a linha no celular*/
+    flex-wrap: wrap;
+    /*Faz quebrar a linha no celular*/
     justify-content: center;
-    gap: 20px;
-    padding: 40px;
+    gap: 25px;
+    padding: 40px 20px;
 }
 
 /*Estilização de cada "Card" de projeto*/
 .card-projeto {
-    text-decoration: none; /*Remove o sublinhado do link*/
-    color: #233445;
-    width: 280px;
-    padding: 20px;
-    border: 3px #121212 solid;
-    border-radius: 10px;
+    text-decoration: none;
     background: linear-gradient(-35deg, #f5f7fa 0%, #c3cfe2 100%);
-    box-shadow: 4px 8px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    border: 4px #121212 double;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    /*No celular ocupa tudo*/
+    max-width: 320px;
+    /*No PC ela para de crescer*/
+    min-height: 180px;
+    /*Garante que todas tenham a mesma altura*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    box-shadow: 4px 13px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-projeto h3 {
@@ -269,29 +285,38 @@ section {
 /*Efeito ao passar o mouse (Hover)*/
 .card-projeto:hover {
     transform: translateY(-10px);
-    box-shadow: 4px 15px 20px rgba(0,0,0,0.2);
+    box-shadow: 4px 15px 20px rgba(0, 0, 0, 0.2);
     border-color: #686de0;
 }
 
-/*Ajuste das caixas no modo escuro*/
+body.modo-escuro h2, 
+body.modo-escuro ul, 
+body.modo-escuro form, 
 body.modo-escuro .card-projeto {
-    background:#1e1e1e !important;
+    background: #1e1e1e !important;
     color: #fafafa !important;
     border-color: #444 !important;
+    box-shadow: 4px 13px 5px rgba(0,0,0,0.5) !important;
 }
 
-body.modo-escuro .card-projeto p {
-    color: #ccc !important;
+
+body.modo-escuro .container-projetos {
+    background: transparent!important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /*section 4*/
 #contato {
     text-align: center;
     margin: auto;
-    background: linear-gradient(to bottom, #e8fcf5, #ffffff);;
+    background: linear-gradient(to bottom, #e8fcf5, #ffffff);
+    ;
 }
 
-#contato form{/*border estilo*/
+#contato form {
+    /*border estilo*/
     display: block;
     margin: auto;
     width: 90%;
@@ -304,7 +329,9 @@ body.modo-escuro .card-projeto p {
     /*background chamativo*/
 }
 
-#contato input[type="text"], #contato input[type="email"], #contato textarea {
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
     width: 90%;
     padding: 12px;
     border: 2px solid #121212;
@@ -338,7 +365,7 @@ body.modo-escuro .card-projeto p {
     background-color: #f0f4f3;
 }
 
-#contato button[type="submit"]:hover{
+#contato button[type="submit"]:hover {
     cursor: pointer;
 }
 
@@ -350,18 +377,23 @@ footer {
 
 @media (max-width: 600px) {
     nav {
-        flex-wrap: wrap; /* Permite que os links ocupem mais de uma linha se faltar espaço */
+        flex-wrap: wrap;
+        /* Permite que os links ocupem mais de uma linha se faltar espaço */
         padding: 5px;
     }
 
     nav a {
-        margin: 5px; /* Diminui o espaço entre os links */
-        padding: 5px 10px; /* Diminui o tamanho do "clique" */
-        font-size: 14px; /* Diminui a letra no celular */
+        margin: 5px;
+        /* Diminui o espaço entre os links */
+        padding: 5px 10px;
+        /* Diminui o tamanho do "clique" */
+        font-size: 14px;
+        /* Diminui a letra no celular */
     }
 
     nav button {
-        margin: 5px auto; /* Centraliza o botão de tema na linha de baixo se não couber */
+        margin: 5px auto;
+        /* Centraliza o botão de tema na linha de baixo se não couber */
         font-size: 14px;
         padding: 4px 10px;
     }
